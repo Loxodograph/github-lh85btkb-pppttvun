@@ -11,7 +11,6 @@
           -->
     <!-- <link rel="stylesheet" href="styles.css" /> -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="script.js"></script>
     <script src="https://kit.fontawesome.com/f19549c8d6.js" crossorigin="anonymous"></script>
@@ -21,8 +20,8 @@
 <body>
     <header>
         <div>
-            <img src="images/Client2_LogoPalette2_20458E.png"
-                alt="ABC Fitness logo" style="width: 100px; height: auto" />
+            <img src="images/Client2_LogoPalette2_20458E.png" alt="ABC Fitness logo"
+                style="width: 100px; height: auto" />
             <h2>ABC Fitness Studio</h2>
             <nav>
                 <a href="/" aria-current="page">Home</a>
@@ -41,14 +40,73 @@
     <section class="cards">
         <div class="w3-card-4" style="width:70%">
             <header class="w3-container w3-light-grey">
-              <h3>John Doe</h3>
+                <h3>John Doe</h3>
             </header>
             <div class="w3-container">
-            <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-              <img src="img_avatar3.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-              <p>Customer Testimonial.</p><br>
+                <i class="fa-regular fa-circle-user w3-circle w3-margin-right"></i>
+
+                <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                <p>Customer Testimonial.</p><br>
             </div>
-          </div>
+
+        </div>
+        <div class="w3-card-4" style="width:70%">
+            <header class="w3-container w3-light-grey">
+                <h3>John Doe</h3>
+            </header>
+            <div class="w3-container">
+                <i class="fa-regular fa-circle-user w3-circle w3-margin-right"></i>
+
+                <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                <p>Customer Testimonial.</p><br>
+            </div>
+
+        </div>
+        <div class="w3-card-4" style="width:70%">
+            <header class="w3-container w3-light-grey">
+                <h3>John Doe</h3>
+            </header>
+            <div class="w3-container">
+                <i class="fa-regular fa-circle-user w3-circle w3-margin-right"></i>
+
+                <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                <p>Customer Testimonial.</p><br>
+            </div>
+
+        </div>
+        <div class="w3-card-4" style="width:70%">
+            <header class="w3-container w3-light-grey">
+                <h3>John Doe</h3>
+            </header>
+            <div class="w3-container">
+                <i class="fa-regular fa-circle-user w3-circle w3-margin-right"></i>
+
+                <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                <p>Customer Testimonial.</p><br>
+            </div>
+
+        </div>
+    </section>
+    <section class="experience">
+        <h2>Share Your Experience</h2>
+        <form action="" method="post" id="contactusform">
+            <label for="name">Your Name
+                <input type="text" name="name" placeholder="Enter Your Name">
+            </label><br>
+            <label for="rating">Rating (1-5):
+                <input type="number" id="rating" name="rating" min="1" max="5" placeholder="5" required>
+            </label><br>
+            <label for="review">Your Review:</label><br>
+            <textarea id="review" name="review" rows="4" cols="50" placeholder="Tell us about your experience..." required></textarea>
+            <label for="Message">Your Experience
+                <input type="text" name="message" id="messagebox" placeholder="Tell us about your experience">
+            </label><br>
+            <input type="submit" value="Submit">
+        </form>
     </section>
 </body>
 
