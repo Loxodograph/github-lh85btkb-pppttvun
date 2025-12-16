@@ -162,6 +162,54 @@ body, html {
   align-items: center;
 }
 
+#navbar {
+  display: flex;
+  /* Optional: Aligns items vertically in the center */
+  align-items: center; 
+  flex-wrap: wrap;
+  /* Optional: Distributes space between elements (logo on the left, links on the right) */
+  justify-content: center; 
+  list-style-type: none; /* Removes bullet points from lists */
+  margin: 0;
+  padding: 0;
+  background-color: #d3d3d3; /* Example background color */
+  color: #00231C;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: smaller;
+}
+
+footer h3 {
+  font-size: smaller;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer p {
+  font-size: smaller;
+}
+
+#footnav {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container-yoga {
+  display: flex;
+  flex-direction: column;
+}
+
 nav.w3-bar {
   width: 100%;
 }
