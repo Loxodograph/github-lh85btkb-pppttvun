@@ -6,6 +6,234 @@
 
 
 
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  /* color: black; */
+  background-color: white;
+  display: flex;
+  flex-direction: column ;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+#topfont {
+  font-size: 2rem;
+  width: auto;
+  text-align: center;
+}
+
+.marker { display: none; }
+
+#navbar {
+  display: flex;
+  /* Optional: Aligns items vertically in the center */
+  align-items: center; 
+  flex-wrap: wrap;
+  /* Optional: Distributes space between elements (logo on the left, links on the right) */
+  justify-content: center; 
+  list-style-type: none; /* Removes bullet points from lists */
+  margin: 0;
+  padding: 0;
+  background-color: #d3d3d3; /* Example background color */
+  color: #00231C;
+}
+
+.my-custom-color {
+  background-color: #d3d3d3;
+  color: #00231C;
+  font-weight: bold;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("./images/Client2_IndividualYoga.png");
+
+  background-size: cover;
+  background-position: center;
+
+  padding: 3rem 1rem;    /* ✅ content controls height */
+}
+
+.hero-text {
+  position: static;      /* ✅ normal document flow */
+  text-align: center;
+  color: #d3d3d3;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+}
+
+.hero-text button {
+  margin-top: 1rem;
+  color: #00231C;
+  background-color: #d3d3d3;
+  border-radius: 9%;
+}
+
+.hero-text button:hover {
+  background-color: #fff;
+  color: #20458e;
+}
+
+.offer {
+
+  border: 1px solid #001f3f;
+
+}
+
+.products {
+  border: 1px solid #001f3f;
+}
+
+.offer-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;  
+}
+
+.special-offers .flex-container,
+.featured-products .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.special-offers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.featured-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.featured-products {
+  display: flex;
+}
+
+#special-offers-header {
+  text-align: center;
+}
+
+#featured-products-header {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;   /* mobile first */
+  align-items: center;      /* ✅ true centering */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.offer,
+.products {
+  width: 100%;
+  max-width: 22rem;
+  margin: 0;                /* ✅ important */
+  border: 1px solid #001f3f;
+  text-align: center;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: column; /* ✅ stacked */
+  align-items: center;
+}
+
+nav.w3-bar {
+  width: 100%;
+}
+
+nav.w3-bar a,
+nav.w3-bar button {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #topfont {
+    width: auto;
+    text-align: center;
+  }
+
+  .special-offers .flex-container,
+  .featured-products .flex-container {
+    flex-wrap: wrap;
+  }
+
+  .offer,
+  .products {
+    width: 90%;
+  }
+
+  nav.w3-bar a,
+  nav.w3-bar button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .flex-container {
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+
+  .offer,
+  .products {
+    width: 30%;
+  }
+
+  #navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav.w3-bar a,
+  nav.w3-bar button {
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-image {
+    padding: 6rem 1rem;
+  }
+}
+
 .container .rating {
     display: flex;
   justify-content: flex-end;
