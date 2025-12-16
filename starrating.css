@@ -1,19 +1,98 @@
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
+.container .rating {
+    display: flex;
+  justify-content: flex-end;
+    direction: rtl;
+}
+
+.container .rating label {
+    display: inline-block;
+    cursor: pointer;
+    color: #00231C;
+}
 
 
+.container .rating label i {
+    font-size: 3rem;
+    transition: 0.1s ease-in;
+}
 
+.w3-container i {
+    color: #00231C;
+}
+.container .rating label:hover i,
+.container .rating label:hover ~ label i {
+    color: #634e99;
+}
+
+.container .rating .rating-radio {
+    display: none;
+}
+
+.container .rating input[type="radio"]:checked + label i,
+.container .rating input[type="radio"]:checked ~ label i {
+    color: #634e99;
+}
+
+.perk-text {
+  text-align: center;
+}
+
+.fas {
+  color: #d3d3d3;
+}
+
+a {
+  text-decoration: none;
+}
+
+.product-button, .offer-button {
+  background-color: #d3d3d3;
+  box-shadow: #001f3f;
+  border-radius: 9%;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: smaller;
+}
+
+footer h3 {
+  font-size: smaller;
+}
+
+footer p {
+  font-size: smaller;
+}
+
+#footnav {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container-yoga {
+  display: flex;
+  flex-direction: column;
+}
 
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  /* color: black; */
-  background-color: white;
+  color: #00231C;
+  background-color: #d3d3d3;
   display: flex;
   flex-direction: column ;
+}
+
+#perk-container {
+  background-color: #20458e;
+  color: #d3d3d3;
 }
 
 img {
@@ -22,13 +101,18 @@ img {
   display: block;
 }
 
-
 #topfont {
   font-size: 2rem;
   width: auto;
   text-align: center;
 }
 
+.perk {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .marker { display: none; }
 
 #navbar {
@@ -162,54 +246,6 @@ body, html {
   align-items: center;
 }
 
-#navbar {
-  display: flex;
-  /* Optional: Aligns items vertically in the center */
-  align-items: center; 
-  flex-wrap: wrap;
-  /* Optional: Distributes space between elements (logo on the left, links on the right) */
-  justify-content: center; 
-  list-style-type: none; /* Removes bullet points from lists */
-  margin: 0;
-  padding: 0;
-  background-color: #d3d3d3; /* Example background color */
-  color: #00231C;
-}
-
-.footer-nav {
-  display: flex;
-  flex-direction: column;
-}
-
-footer {
-  display: flex !important;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: smaller;
-}
-
-footer h3 {
-  font-size: smaller;
-}
-
-a {
-  text-decoration: none;
-}
-
-footer p {
-  font-size: smaller;
-}
-
-#footnav {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-container-yoga {
-  display: flex;
-  flex-direction: column;
-}
-
 nav.w3-bar {
   width: 100%;
 }
@@ -281,133 +317,3 @@ nav.w3-bar button {
     padding: 6rem 1rem;
   }
 }
-
-.container .rating {
-    display: flex;
-  justify-content: flex-end;
-    direction: rtl;
-}
-
-.container .rating label {
-    display: inline-block;
-    cursor: pointer;
-    color: #00231C;
-}
-
-
-.container .rating label i {
-    font-size: 3rem;
-    transition: 0.1s ease-in;
-}
-
-.w3-container i {
-    color: #00231C;
-}
-.container .rating label:hover i,
-.container .rating label:hover ~ label i {
-    color: #00231C;
-}
-
-.container .rating .rating-radio {
-    display: none;
-}
-
-.container .rating input[type="radio"]:checked + label i,
-.container .rating input[type="radio"]:checked ~ label i {
-    color: #00231C;
-}
-
-body {
-    margin: 0;
-    font-family: system-ui, sans-serif;
-    color: #00231C;
-    background-color: #d3d3d3;
-    display: flex;
-    flex-direction: column ;
-  }
-  
-  #topfont {
-    font-size: 2rem;
-    width: 35%;
-    padding-left: 10px;
-  }
-  
-  nav .marker { display: none; }
-  
-  #navbar {
-    display: flex;
-    /* Optional: Aligns items vertically in the center */
-    align-items: center; 
-    /* Optional: Distributes space between elements (logo on the left, links on the right) */
-    justify-content: space-between; 
-    list-style-type: none; /* Removes bullet points from lists */
-    margin: 0;
-    padding: 0;
-    background-color: #d3d3d3; /* Example background color */
-    color: #00231C;
-  }
-  
-  body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/Client2_IndividualYoga.png");
-    height: 30%;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-  
-  .hero-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #d3d3d3;
-  }
-  
-  .hero-text button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 10px 25px;
-    color: #001f3f;
-    background-color: #d3d3d3;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 5%;
-  }
-  
-  .hero-text button:hover {
-    background-color: #fff;
-    color: #20458e;
-  }
-  
-  .special-offers {
-    display: flex;
-  }
-  
-  .featured-products {
-    display: flex;
-  }
-
-  .my-custom-color {
-    background-color: #d3d3d3;
-    color: #00231C;
-    font-weight: bold;
-  }
-  @media screen and (max-width: 600px) {
-    /* CSS styles inside this block apply only when the viewport width is 600 pixels or less */
-    body {
-      background-color: #ffffff;
-    }
-    #navbar {
-      
-    }
-  }
