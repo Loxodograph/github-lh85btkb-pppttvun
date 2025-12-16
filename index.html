@@ -10,6 +10,7 @@
       Remove all code in `styles.css`!
     -->
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="module" src="script.js"></script>
   <script src="https://kit.fontawesome.com/f19549c8d6.js" crossorigin="anonymous"></script>
@@ -18,78 +19,96 @@
 
 <body>
   <header>
-    <div>
-      <img src="images/Client2_LogoPalette2_20458E.png"
-        alt="ABC Fitness logo" style="width: 100px; height: auto" />
-      <h2>ABC Fitness Studio</h2>
-      <nav>
-        <a href="/" aria-current="page">Home</a>
-        <a href="/products.html">Products</a>
-        <a href="/aboutus.html">About Us</a>
-        <a href="/testimonials.html">Testimonials</a>
+    <div class="w3-container" id="navbar">
+      <img class="w3-left" src="images/Client2_LogoPalette2_20458E.png" alt="ABC Fitness logo"
+        style="width: 100px; height: auto" />
+      <h2 id="topfont">ABC Fitness Studio</h2>
+      <nav class="w3-bar my-custom-color">
+        <div class="marker">You are currently on </div>
+        <a class="w3-bar-item w3-button w3-mobile" href="/" aria-current="page">Home</a>
+        <div class="marker">You are currently on </div>
+        <a class="w3-bar-item w3-button w3-mobile" href="/products.html">Products</a>
+        <div class="marker">You are currently on </div>
+        <a class="w3-bar-item w3-button w3-mobile" href="/aboutus.html">About Us</a>
+        <div class="marker">You are currently on </div>
+        <a class="w3-bar-item w3-button w3-mobile" href="/testimonials.html">Testimonials</a>
+        <div class="marker">You are currently on </div>
+        <button class="w3-bar-item w3-right w3-button w3-mobile"> Cart (0)</button>
       </nav>
-      <button>Cart (0)</button>
+
     </div>
   </header>
   <main>
-    <div>
-      <h1>H1 Page title</h1>
-      <p>Information about the yoga Studio</p>
-      <button>Book Now</button>
-      <img src="" />
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1 style="font-size:50px">ABC Fitness Studio</h1>
+        <p>Book your session today</p>
+        <a href="./products.html"><button>Book Now</button></a>
+      </div>
     </div>
+    <h2 id="special-offers-header">Special Offers</h2>
 
     <section class="special-offers">
-      <h2>Special Offers</h2>
+
 
       <div class="flex-container">
         <div class="offer">
           <img src="./images/Client2_GroupKickboxing.png" />
-          <h3>Group Kickboxing</h3>
-          <p>5 for 4 deal</p>
-          <button>Shop Special Offer</button>
+          <h3 font-weight="bold">Group Kickboxing</h3>
+          <p font-weight="bold">5 for 4 deal</p>
+          <div class="offer-details">
+
+           <a href="products.html"><button class="offer-button">Shop Special Offer</button></a>
+          </div>
         </div>
         <div class="offer">
           <img src="./images/Client2_GroupPilates.png" />
-          <h3>Group Pilates</h3>
-          <p>5 for 4 deal</p>
-          <button>Shop Special Offer</button>
+          <h3 font-weight="bold">Group Pilates</h3>
+          <p font-weight="bold">5 for 4 deal</p>
+          <div class="offer-details">
+
+            <a href="products.html"><button class="offer-button">Shop Special Offer</button></a>
+          </div>
         </div>
         <div class="offer">
           <img src="./images/Client2_GroupYoga.png" />
-          <h3>Group Yoga</h3>
-          <p>5 for 4 deal</p>
-          <button>Shop Special Offer</button>
+          <h3 font-weight="bold">Group Yoga</h3>
+          <p font-weight="bold">5 for 4 deal</p>
+          <div class="offer-details">
+
+            <a href="products.html"><button class="offer-button">Shop Special Offer</button></a>
+          </div>
         </div>
       </div>
     </section>
+    <h2 id="featured-products-header">Featured Products</h2>
 
     <section class="featured-products">
-      <h2>Featured Products</h2>
-
       <div class="flex-container">
-        <div class="products">
+        <div class="products w3-container w3-center">
           <img src="./images/Client2_TeeShirt.png" />
           <h3>Tee Shirt</h3>
           <p>$24.99</p>
-          <button>View Details</button>
+          <a href="./products.html"><button>View Details</button></a>
         </div>
-        <div class="products">
+        <div class="products w3-container w3-center">
           <img src="./images/Client2_WaterBottle.png" />
           <h3>Water Bottle</h3>
           <p>$14.99</p>
-          <button>View Details</button>
+          <a href="./products.html"><button>View Details</button></a>
         </div>
-        <div class="products">
+        <div class="products w3-container w3-center">
           <img src="./images/Client2_YogaMat.png" />
           <h3>Yoga Mat</h3>
           <p>$69.99</p>
-          <button>View Details</button>
+          <a href="./products.html"><button>View Details</button></a>
         </div>
-
-        <button>View All Products</button>
       </div>
+
     </section>
+    <div class="w3-container w3-center">
+      <a href="./products.html"><button class="product-button">View All Products</button></a>
+  </div>
 
 
     <section class="value-perks">

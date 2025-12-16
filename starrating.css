@@ -1,0 +1,137 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+
+
+.container .rating {
+    display: flex;
+  justify-content: flex-end;
+    direction: rtl;
+}
+
+.container .rating label {
+    display: inline-block;
+    cursor: pointer;
+    color: #00231C;
+}
+
+
+.container .rating label i {
+    font-size: 3rem;
+    transition: 0.1s ease-in;
+}
+
+.w3-container i {
+    color: #00231C;
+}
+.container .rating label:hover i,
+.container .rating label:hover ~ label i {
+    color: #00231C;
+}
+
+.container .rating .rating-radio {
+    display: none;
+}
+
+.container .rating input[type="radio"]:checked + label i,
+.container .rating input[type="radio"]:checked ~ label i {
+    color: #00231C;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    color: #00231C;
+    background-color: #d3d3d3;
+    display: flex;
+    flex-direction: column ;
+  }
+  
+  #topfont {
+    font-size: 2rem;
+    width: 35%;
+    padding-left: 10px;
+  }
+  
+  nav .marker { display: none; }
+  
+  #navbar {
+    display: flex;
+    /* Optional: Aligns items vertically in the center */
+    align-items: center; 
+    /* Optional: Distributes space between elements (logo on the left, links on the right) */
+    justify-content: space-between; 
+    list-style-type: none; /* Removes bullet points from lists */
+    margin: 0;
+    padding: 0;
+    background-color: #d3d3d3; /* Example background color */
+    color: #00231C;
+  }
+  
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/Client2_IndividualYoga.png");
+    height: 30%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #d3d3d3;
+  }
+  
+  .hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: #001f3f;
+    background-color: #d3d3d3;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5%;
+  }
+  
+  .hero-text button:hover {
+    background-color: #fff;
+    color: #20458e;
+  }
+  
+  .special-offers {
+    display: flex;
+  }
+  
+  .featured-products {
+    display: flex;
+  }
+
+  .my-custom-color {
+    background-color: #d3d3d3;
+    color: #00231C;
+    font-weight: bold;
+  }
+  @media screen and (max-width: 600px) {
+    /* CSS styles inside this block apply only when the viewport width is 600 pixels or less */
+    body {
+      background-color: #ffffff;
+    }
+    #navbar {
+      
+    }
+  }

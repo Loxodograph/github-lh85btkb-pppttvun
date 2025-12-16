@@ -9,7 +9,7 @@
             Need a visual blank slate?
             Remove all code in `styles.css`!
           -->
-    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <link rel="stylesheet" href="starrating.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="script.js"></script>
@@ -19,17 +19,23 @@
 
 <body>
     <header>
-        <div>
-            <img src="images/Client2_LogoPalette2_20458E.png" alt="ABC Fitness logo"
+        <div class="w3-container" id="navbar">
+            <img class="w3-left" src="images/Client2_LogoPalette2_20458E.png" alt="ABC Fitness logo"
                 style="width: 100px; height: auto" />
-            <h2>ABC Fitness Studio</h2>
-            <nav>
-                <a href="/" aria-current="page">Home</a>
-                <a href="/products.html">Products</a>
-                <a href="/aboutus.html">About Us</a>
-                <a href="/testimonials.html">Testimonials</a>
+            <h2 id="topfont">ABC Fitness Studio</h2>
+            <nav class="w3-bar my-custom-color">
+                <div class="marker">You are currently on </div>
+                <a class="w3-bar-item w3-button w3-mobile" href="/" aria-current="page">Home</a>
+                <div class="marker">You are currently on </div>
+                <a class="w3-bar-item w3-button w3-mobile" href="/products.html">Products</a>
+                <div class="marker">You are currently on </div>
+                <a class="w3-bar-item w3-button w3-mobile" href="/aboutus.html">About Us</a>
+                <div class="marker">You are currently on </div>
+                <a class="w3-bar-item w3-button w3-mobile" href="/testimonials.html">Testimonials</a>
+                <div class="marker">You are currently on </div>
+                <button class="w3-bar-item w3-right w3-button w3-mobile"> Cart (0)</button>
             </nav>
-            <button>Cart (0)</button>
+
         </div>
     </header>
     <section class="customer-testimonials">
@@ -39,72 +45,112 @@
     </section>
     <section class="cards">
         <div class="w3-card-4" style="width:70%">
-            <header class="w3-container w3-light-grey">
+            <header class="w3-container my-custom-color">
                 <h3>John Doe</h3>
             </header>
             <div class="w3-container">
                 <i class="fa-regular fa-circle-user w3-circle w3-margin-right"></i>
 
-                <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                <p>Customer Testimonial.</p><br>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                </p><br>
             </div>
 
         </div>
+        <br>
         <div class="w3-card-4" style="width:70%">
-            <header class="w3-container w3-light-grey">
+            <header class="w3-container my-custom-color">
                 <h3>John Doe</h3>
             </header>
             <div class="w3-container">
                 <i class="fa-regular fa-circle-user w3-circle w3-margin-right"></i>
 
-                <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                <p>Customer Testimonial.</p><br>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p><br>
             </div>
 
         </div>
+        <br>
         <div class="w3-card-4" style="width:70%">
-            <header class="w3-container w3-light-grey">
+            <header class="w3-container my-custom-color">
                 <h3>John Doe</h3>
             </header>
             <div class="w3-container">
                 <i class="fa-regular fa-circle-user w3-circle w3-margin-right"></i>
 
-                <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                <p>Customer Testimonial.</p><br>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p><br>
             </div>
 
         </div>
+        <br>
         <div class="w3-card-4" style="width:70%">
-            <header class="w3-container w3-light-grey">
+            <header class="w3-container my-custom-color">
                 <h3>John Doe</h3>
             </header>
             <div class="w3-container">
                 <i class="fa-regular fa-circle-user w3-circle w3-margin-right"></i>
 
-                <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                <p>Customer Testimonial.</p><br>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p><br>
             </div>
 
         </div>
+        <br>
     </section>
+
+
     <section class="experience">
         <h2>Share Your Experience</h2>
         <form action="" method="post" id="contactusform">
             <label for="name">Your Name
                 <input type="text" name="name" placeholder="Enter Your Name">
-            </label><br>
-            <label for="rating">Rating (1-5):
-                <input type="number" id="rating" name="rating" min="1" max="5" placeholder="5" required>
-            </label><br>
+            </label><br><br>
+            <div class="container">
+                <div class="rating">
+                    <input type="radio" name="rating" id="star-1" class="rating-radio" value="1">
+                    <label for="star-1"><i class="fa-solid fa-star"></i></label>
+
+                    <input type="radio" name="rating" id="star-2" class="rating-radio" value="2">
+                    <label for="star-2"><i class="fa-solid fa-star"></i></label>
+
+                    <input type="radio" name="rating" id="star-3" class="rating-radio" value="3">
+                    <label for="star-3"><i class="fa-solid fa-star"></i></label>
+
+                    <input type="radio" name="rating" id="star-4" class="rating-radio" value="4">
+                    <label for="star-4"><i class="fa-solid fa-star"></i></label>
+
+                    <input type="radio" name="rating" id="star-5" class="rating-radio" value="5">
+                    <label for="star-5"><i class="fa-solid fa-star"></i></label>
+                </div>
+            </div>
             <label for="review">Your Review:</label><br>
-            <textarea id="review" name="review" rows="4" cols="50" placeholder="Tell us about your experience..." required></textarea>
-            <label for="Message">Your Experience
-                <input type="text" name="message" id="messagebox" placeholder="Tell us about your experience">
-            </label><br>
+            <textarea id="review" name="review" rows="4" cols="50" placeholder="Tell us about your experience..."
+                required></textarea><br>
             <input type="submit" value="Submit">
         </form>
     </section>
