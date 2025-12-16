@@ -9,7 +9,7 @@
       Need a visual blank slate?
       Remove all code in `styles.css`!
     -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="module" src="script.js"></script>
@@ -54,7 +54,7 @@
 
       <div class="flex-container">
         <div class="offer">
-          <img src="./images/Client2_GroupKickboxing.png" />
+          <img src="./images/Client2_GroupKickboxing.png" alt="Group Kickboxing"/>
           <h3 font-weight="bold">Group Kickboxing</h3>
           <p font-weight="bold">5 for 4 deal</p>
           <div class="offer-details">
@@ -63,7 +63,7 @@
           </div>
         </div>
         <div class="offer">
-          <img src="./images/Client2_GroupPilates.png" />
+          <img src="./images/Client2_GroupPilates.png" alt="Group Pilates"/>
           <h3 font-weight="bold">Group Pilates</h3>
           <p font-weight="bold">5 for 4 deal</p>
           <div class="offer-details">
@@ -72,7 +72,7 @@
           </div>
         </div>
         <div class="offer">
-          <img src="./images/Client2_GroupYoga.png" />
+          <img src="./images/Client2_GroupYoga.png" alt="Group Yoga"/>
           <h3 font-weight="bold">Group Yoga</h3>
           <p font-weight="bold">5 for 4 deal</p>
           <div class="offer-details">
@@ -87,19 +87,19 @@
     <section class="featured-products">
       <div class="flex-container">
         <div class="products w3-container w3-center">
-          <img src="./images/Client2_TeeShirt.png" />
+          <img src="./images/Client2_TeeShirt.png" alt="T-Shirt"/>
           <h3>Tee Shirt</h3>
           <p>$24.99</p>
           <a href="./products.html"><button class="product-button">View Details</button></a>
         </div>
         <div class="products w3-container w3-center">
-          <img src="./images/Client2_WaterBottle.png" />
+          <img src="./images/Client2_WaterBottle.png" alt="Water Bottle"/>
           <h3>Water Bottle</h3>
           <p>$14.99</p>
           <a href="./products.html"><button class="product-button">View Details</button></a>
         </div>
         <div class="products w3-container w3-center">
-          <img src="./images/Client2_YogaMat.png" />
+          <img src="./images/Client2_YogaMat.png" alt="Yoga Mat"/>
           <h3>Yoga Mat</h3>
           <p>$69.99</p>
           <a href="./products.html"><button class="product-button">View Details</button></a>
@@ -132,7 +132,26 @@
         </div>
       </div>
     </section>
+
+    <section class="shop-by-category">
+      <h2 class="category-text w3-center">Shop by Category</h2>
+      <div class="flex-container" id="category-container">
+        <div class="category">
+          <img src="./images/Client2_TeeShirt.png" alt="T Shirt" width="80%" />
+          <a href="products.html#merchandise"><h3>Merchandise</h3></a>
+        </div>
+        <div class="category">
+          <img src="./images/Client2_IndividualYoga.png" alt="Pilates Reformer" width="80%" />
+          <a href="products.html#individual-classes"><h3>Individual Classes</h3></a>
+        </div>
+        <div class="category">
+          <img src="./images/Client2_GroupKickboxing.png" alt="Kickboxing Gloves" width="80%" />
+          <a href="products.html#group-classes"><h3>Group Classes</h3></a>
+        </div>
+      </div>
+    </section>
   </main>
+
 </body>
 <footer>
   <div class="flex-container-yoga">
@@ -173,7 +192,7 @@
       <p>Sun: Closed</p>
     </div>
     <div>
-      <h2>Contact Us</h2>
+      <h3>Contact Us</h3>
       <p>Address</p>
       <p>(555) 123-4567</p>
       <p>email@address.com</p>

@@ -1,3 +1,13 @@
+h1 {
+  font-size: 3rem !important;
+  font-weight: bold !important;
+}
+
+h2 {
+  font-size: 2rem !important;
+  font-weight: bold !important;
+}
+
 .perk-text {
   text-align: center;
 }
@@ -26,14 +36,17 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   font-size: smaller;
+  padding: 2%;
 }
 
 footer h3 {
-  font-size: smaller;
+  font-weight: bold;
+  font-size: medium;
 }
 
 footer p {
-  font-size: smaller;
+  font-size: medium;
+  line-height: 25%;
 }
 
 #footnav {
@@ -78,6 +91,7 @@ img {
   justify-content: center;
   align-items: center;
 }
+
 .marker { display: none; }
 
 #navbar {
@@ -221,8 +235,6 @@ nav.w3-bar button {
   text-align: center;
 }
 
-<<<<<<< HEAD
-=======
 .about-us-container {
   display: grid;
     grid-template-columns: 1.9fr 0.3fr; /* text | images */
@@ -354,6 +366,21 @@ nav.w3-bar button {
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
+.individual-classes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.group-classes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.merchandise {
+  display: flex;
+  justify-content: space-between;
+}
+
 #contactusform input[type="submit"]:hover {
   background-color: #16336d;
   transform: translateY(-1px);
@@ -362,7 +389,6 @@ nav.w3-bar button {
 #contactusform input[type="submit"]:active {
   transform: translateY(0);
 }
->>>>>>> parent of d66bb47 (added rules)
 @media (max-width: 768px) {
 
   #navbar {
@@ -388,6 +414,56 @@ nav.w3-bar button {
   nav.w3-bar a,
   nav.w3-bar button {
     width: 100%;
+  }
+
+  /* Make the about section stack in a single column on small screens */
+  .about-us-container {
+    grid-template-columns: 1fr; /* stack text above photos */
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  /* Ensure photo column flows after the text on mobile */
+  .about-text {
+    order: 1;
+  }
+
+  .photos {
+    order: 2;
+  }
+
+  /* Make contact form full width and comfortable on small screens */
+  .contact-form {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  /* Footer becomes vertical on small screens */
+  footer {
+    flex-direction: column !important;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  /* Improve spacing for the large photo on small screens */
+  .photo-large {
+    aspect-ratio: 16/9;
+    width: 100%;
+  }
+
+  /* Keep small photos in two columns that collapse nicely */
+  .photo-small-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  /* Constrain overall content width so large screens don't feel cramped when resized */
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 1rem;
   }
 }
 
