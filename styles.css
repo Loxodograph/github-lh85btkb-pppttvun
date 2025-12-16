@@ -1,3 +1,13 @@
+h1 {
+  font-size: 3rem !important;
+  font-weight: bold !important;
+}
+
+h2 {
+  font-size: 2rem !important;
+  font-weight: bold !important;
+}
+
 .perk-text {
   text-align: center;
 }
@@ -354,6 +364,21 @@ nav.w3-bar button {
   border-radius: 999px;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.individual-classes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.group-classes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.merchandise {
+  display: flex;
+  justify-content: space-between;
 }
 
 #contactusform input[type="submit"]:hover {
