@@ -260,6 +260,11 @@ nav.w3-bar button {
   text-align: center;
 }
 
+hr {
+  color: #00231C;
+  background-color: #00231C;
+  border: #001f3f 2px solid !important;
+}
 @media (max-width: 768px) {
 
   .cards {

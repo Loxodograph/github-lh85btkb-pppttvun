@@ -94,6 +94,14 @@ img {
 
 .marker { display: none; }
 
+
+.offers-banner {
+  background-color: #20458e;
+  color: #d3d3d3;
+  padding: 1rem 0;
+  text-align: center;
+}
+
 #navbar {
   display: flex;
   /* Optional: Aligns items vertically in the center */
@@ -389,6 +397,13 @@ nav.w3-bar button {
 #contactusform input[type="submit"]:active {
   transform: translateY(0);
 }
+
+hr {
+  color: #00231C;
+  background-color: #00231C;
+  border: #001f3f 2px solid !important;
+}
+
 @media (max-width: 768px) {
 
   #navbar {
