@@ -7,17 +7,63 @@ const clearCartBtn = document.querySelector('#clear-cart-btn');
 const processOrderBtn = document.querySelector('#process-order-btn');
 const contactSubmitButton = document.querySelector('#contact-submit');
 const testimonialSubmitButton = document.querySelector('#testimonial-btn');
+const myModalList = document.querySelector('#cart-items-list');
+const totalPrice = myModalList.appendChild(document.createElement('li'));
+totalPrice.id = 'total-price';
 
 let cartItemCount = 0;
 cartButton.innerText = `Cart (${cartItemCount})`;
+let price = 0;
 
 // add to cart button functionality
 addToCartButtons.forEach(function (button) {
   button.addEventListener('click', function () {
     alert('Item added to cart!');
+    
     cartItemCount += 1;
     cartButton.innerText = `Cart (${cartItemCount})`;
-    myModal.querySelector('p').innerText = `Cart Items: X`;
+    myModal.querySelector('p').innerText = `Cart Items: ${cartItemCount}`;
+    const name = event.target.name;
+    switch (name) {
+      case 'individualYoga':
+        myModalList.appendChild(document.createElement('li')).textContent = `(Individual Yoga Session)`;
+        price += 50;
+        break;
+      case 'groupYoga':
+        myModalList.appendChild(document.createElement('li')).textContent = `(Group Yoga Class)`;
+        price += 35;
+        break;
+      case 'individualKickboxing':
+        myModalList.appendChild(document.createElement('li')).textContent = `(Individual Kickboxing Class)`;
+        price += 60;
+        break;
+      case 'groupKickboxing':
+        myModalList.appendChild(document.createElement('li')).textContent = `(Group Kickboxing Class)`;
+        price += 40;
+        break;
+      case 'individualPilates':
+        myModalList.appendChild(document.createElement('li')).textContent = `(Individual Pilates Class)`;
+        price += 45;
+        break;
+      case 'groupPilates':
+        myModalList.appendChild(document.createElement('li')).textContent = `(Group Pilates Class)`;
+        price += 25;
+        break;
+      case 'tShirt':
+        myModalList.appendChild(document.createElement('li')).textContent = `(ABC T-Shirt)`;
+        price += 25;
+        break;
+      case 'waterBottle':
+        myModalList.appendChild(document.createElement('li')).textContent = `(ABC Water Bottle)`;
+        price += 25;
+        break;
+      case 'yogaMat':
+        myModalList.appendChild(document.createElement('li')).textContent = `(ABC Yoga Mat)`;
+        price += 25;
+        break;
+    }
+    
+    totalPrice.innerText = `Total Price: $${price.toFixed(2)}`;
   });
 });
 
@@ -49,6 +95,7 @@ clearCartBtn.addEventListener('click', () => {
   cartItemCount = 0;
   cartButton.innerText = `Cart (${cartItemCount})`;
   myModal.querySelector('p').innerText = `Cart Items: 0`;
+  myModalList.innerHTML = '';
   alert('Cart has been cleared.');
 });
 
@@ -60,6 +107,7 @@ processOrderBtn.addEventListener('click', () => {
     alert('Your order has been processed. Thank you for shopping with us!');
     cartItemCount = 0;
     cartButton.innerText = `Cart (${cartItemCount})`;
+    myModalList.innerHTML = '';
     myModal.querySelector('p').innerText = `Cart Items: 0`;
     myModal.close();
   }
