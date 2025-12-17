@@ -23,7 +23,8 @@
       <img class="w3-left" src="images/Client2_LogoPalette2_20458E.png" alt="ABC Fitness logo"
         style="width: 100px; height: auto" />
       <h2 id="topfont">ABC Fitness Studio</h2>
-      <nav class="w3-bar my-custom-color">
+      <nav id="main-nav" class="w3-bar my-custom-color">
+        <button id="menu-toggle" class="w3-bar-item menu-btn" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
         <div class="marker">You are currently on </div>
         <a class="w3-bar-item w3-button w3-mobile" href="/" aria-current="page">Home</a>
         <div class="marker">You are currently on </div>
@@ -33,14 +34,21 @@
         <div class="marker">You are currently on </div>
         <a class="w3-bar-item w3-button w3-mobile" href="/testimonials.html">Testimonials</a>
         <div class="marker">You are currently on </div>
-        <button class="w3-bar-item w3-right w3-button w3-mobile"> Cart (0)</button>
+        <button class="w3-bar-item w3-right w3-button w3-mobile" id="cart-btn"> Cart (0)</button>
+        <dialog id="myModal">
+          <h2>Cart</h2>
+          <p>Cart Items</p>
+          <button id="close-modal-btn">Close</button>
+          <button id="clear-cart-btn">Clear Cart</button>
+          <button id="process-order-btn">Process Order</button>
+        </dialog>
       </nav>
     </div>
   </header>
   <main>
     <div class="hero-image">
       <div class="hero-text">
-        <h1 style="font-size:50px">Get in the best shape of your life</h1>
+        <h1>Get in the best shape of your life</h1>
         <p>Start your fitness journey today with ABC Fitness. Create the newer, calmer
           better you.
         </p>

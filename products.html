@@ -24,7 +24,8 @@
       <img class="w3-left" src="images/Client2_LogoPalette2_20458E.png" alt="ABC Fitness logo"
         style="width: 100px; height: auto" />
       <h2 id="topfont">ABC Fitness Studio</h2>
-      <nav class="w3-bar my-custom-color">
+      <nav id="main-nav" class="w3-bar my-custom-color">
+        <button id="menu-toggle" class="w3-bar-item menu-btn" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
         <div class="marker">You are currently on </div>
         <a class="w3-bar-item w3-button w3-mobile" href="/" aria-current="page">Home</a>
         <div class="marker">You are currently on </div>
@@ -34,7 +35,14 @@
         <div class="marker">You are currently on </div>
         <a class="w3-bar-item w3-button w3-mobile" href="/testimonials.html">Testimonials</a>
         <div class="marker">You are currently on </div>
-        <button class="w3-bar-item w3-right w3-button w3-mobile"> Cart (0)</button>
+        <button class="w3-bar-item w3-right w3-button w3-mobile" id="cart-btn"> Cart (0)</button>
+        <dialog id="myModal">
+          <h2>Cart</h2>
+          <p>Cart Items</p>
+          <button id="close-modal-btn">Close</button>
+          <button id="clear-cart-btn">Clear Cart</button>
+          <button id="process-order-btn">Process Order</button>
+        </dialog>
       </nav>
 
     </div>
@@ -56,21 +64,21 @@
             <h3>Individual Yoga</h3>
             <p>Yoga Description</p>
             <p>$50.00/class</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
           </div>
           <div class="product">
             <img src="./images/Client2_IndividualKickboxing.png" alt="Individual Kickboxing Class">
             <h3>Individual Kickboxing</h3>
             <p>Kickboxing Description</p>
             <p>$60.00/class</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
           </div>
           <div class="product">
             <img src="./images/Client2_IndividualPilates.png" alt="Individual Pilates Class">
             <h3>Individual Pilates</h3>
             <p>Pilates Description</p>
             <p>$45.00/class</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
           </div>
         </div>
         <hr>
@@ -81,21 +89,21 @@
             <h3>Group Yoga</h3>
             <p>Yoga Description</p>
             <p>$35.00/class</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
           </div>
           <div class="product">
             <img src="./images/Client2_GroupKickboxing.png" alt="Group Kickboxing Class">
             <h3>Group Kickboxing</h3>
             <p>Kickboxing Description</p>
             <p>$45.00/class</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
           </div>
           <div class="product">
             <img src="./images/Client2_GroupPilates.png" alt="Group Pilates Class">
             <h3>Group Pilates</h3>
             <p>Pilates Description</p>
             <p>$25.00/class</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
           </div>
         </div>
         <hr>
@@ -106,14 +114,14 @@
             <h3>ABC T Shirt</h3>
             <p>T Shirt Description</p>
             <p>$24.99</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
           </div>
           <div class="product">
             <img src="./images/Client2_WaterBottle.png" alt="ABC Fitness Water Bottle">
             <h3>ABC Water Bottle</h3>
             <p>Water bottle description</p>
             <p>$24.99</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
           </div>
 
           <div class="product">
@@ -121,7 +129,7 @@
             <h3>ABC Yoga Mat</h3>
             <p>Yoga mat description</p>
             <p>$24.99</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
           </div>
         </div>
 
@@ -188,7 +196,7 @@
     <form action="">
       <label for="email"></label><br />
       <input type="email" id="email" name="email" value="Your Email" /><br />
-      <input type="submit" value="Subscribe" />
+      <input type="submit" value="Subscribe" id="newsletter-btn"/>
     </form>
 
 

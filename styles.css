@@ -20,7 +20,8 @@ a {
   text-decoration: none;
 }
 
-.product-button, .offer-button {
+.product-button,
+.offer-button {
   background-color: #d3d3d3;
   box-shadow: #001f3f;
   border-radius: 9%;
@@ -65,7 +66,7 @@ body {
   color: #00231C;
   background-color: #d3d3d3;
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
 }
 
 #perk-container {
@@ -92,7 +93,9 @@ img {
   align-items: center;
 }
 
-.marker { display: none; }
+.marker {
+  display: none;
+}
 
 
 .offers-banner {
@@ -105,14 +108,16 @@ img {
 #navbar {
   display: flex;
   /* Optional: Aligns items vertically in the center */
-  align-items: center; 
+  align-items: center;
   flex-wrap: wrap;
   /* Optional: Distributes space between elements (logo on the left, links on the right) */
-  justify-content: center; 
-  list-style-type: none; /* Removes bullet points from lists */
+  justify-content: center;
+  list-style-type: none;
+  /* Removes bullet points from lists */
   margin: 0;
   padding: 0;
-  background-color: #d3d3d3; /* Example background color */
+  background-color: #d3d3d3;
+  /* Example background color */
   color: #00231C;
 }
 
@@ -122,27 +127,28 @@ img {
   font-weight: bold;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .hero-image {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)),
     url("./images/Client2_IndividualYoga.png");
 
   background-size: cover;
   background-position: center;
 
-  padding: 3rem 1rem;    /* ✅ content controls height */
+  padding: 3rem 1rem;
+  /* ✅ content controls height */
 }
 
 .hero-text {
-  position: static;      /* ✅ normal document flow */
+  position: static;
+  /* ✅ normal document flow */
   text-align: center;
   color: #d3d3d3;
 }
@@ -176,8 +182,9 @@ body, html {
 .offer-details {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;  
+  justify-content: center;
+  /* Centers horizontally */
+  align-items: center;
 }
 
 .special-offers .flex-container,
@@ -198,6 +205,7 @@ body, html {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .featured-products {
   display: flex;
 }
@@ -212,8 +220,10 @@ body, html {
 
 .flex-container {
   display: flex;
-  flex-direction: column;   /* mobile first */
-  align-items: center;      /* ✅ true centering */
+  flex-direction: column;
+  /* mobile first */
+  align-items: center;
+  /* ✅ true centering */
   gap: 1rem;
   padding: 1rem;
 }
@@ -222,14 +232,16 @@ body, html {
 .products {
   width: 100%;
   max-width: 22rem;
-  margin: 0;                /* ✅ important */
+  margin: 0;
+  /* ✅ important */
   border: 1px solid #001f3f;
   text-align: center;
 }
 
 #navbar {
   display: flex;
-  flex-direction: column; /* ✅ stacked */
+  flex-direction: column;
+  /* ✅ stacked */
   align-items: center;
 }
 
@@ -245,7 +257,8 @@ nav.w3-bar button {
 
 .about-us-container {
   display: grid;
-    grid-template-columns: 1.9fr 0.3fr; /* text | images */
+  grid-template-columns: 1.9fr 0.3fr;
+  /* text | images */
   gap: 2rem;
   align-items: start;
 }
@@ -264,7 +277,8 @@ nav.w3-bar button {
 
 .photo-large {
   width: 100%;
-  aspect-ratio: 3 / 2; /* rectangle */
+  aspect-ratio: 3 / 2;
+  /* rectangle */
   object-fit: cover;
 }
 
@@ -276,7 +290,8 @@ nav.w3-bar button {
 
 .photo-small-row img {
   width: 100%;
-  aspect-ratio: 1 / 1; /* square */
+  aspect-ratio: 1 / 1;
+  /* square */
   object-fit: cover;
 }
 
@@ -310,12 +325,18 @@ nav.w3-bar button {
 }
 
 .contact-form {
-  margin-top: 2rem;          /* spacing under images */
-  padding: 1.5rem;           /* inner padding */
-  background-color: #d3d3d3;  /* clean card look */
-  border-radius: 12px;        /* rounded corners */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18); /* subtle shadow */
-  width: 100%;                /* take full width of right column */
+  margin-top: 2rem;
+  /* spacing under images */
+  padding: 1.5rem;
+  /* inner padding */
+  background-color: #d3d3d3;
+  /* clean card look */
+  border-radius: 12px;
+  /* rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  /* subtle shadow */
+  width: 100%;
+  /* take full width of right column */
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -406,6 +427,37 @@ hr {
 
 @media (max-width: 768px) {
 
+  /* show menu control */
+  nav.w3-bar .menu-btn {
+    display: inline-block;
+  }
+
+  /* collapse nav items when not open */
+  nav.w3-bar:not(.open) .w3-bar-item:not(.menu-btn) {
+    display: none !important;
+  }
+
+  /* when the nav is open, show items stacked */
+  nav.w3-bar.open .w3-bar-item {
+    display: block !important;
+    width: 100%;
+  }
+
+  /* Make form inputs and textarea take full available width */
+  #contactusform input[type="text"],
+  #contactusform input[type="email"],
+  #contactusform textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Make business hours table horizontally scrollable on very small screens */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+
   #navbar {
     flex-direction: column;
     align-items: center;
@@ -433,7 +485,8 @@ hr {
 
   /* Make the about section stack in a single column on small screens */
   .about-us-container {
-    grid-template-columns: 1fr; /* stack text above photos */
+    grid-template-columns: 1fr;
+    /* stack text above photos */
     padding: 1rem;
     gap: 1rem;
   }
@@ -487,7 +540,11 @@ hr {
   .flex-container {
     flex-direction: row;
     justify-content: center;
-    
+
+  }
+
+  #menu-toggle {
+    display: none;
   }
 
   .offer,
@@ -514,4 +571,35 @@ hr {
   .hero-image {
     padding: 6rem 1rem;
   }
+}
+
+/* Page container for centered content */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Mobile menu button (hidden on desktop) */
+.menu-btn {
+  display: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  color: inherit;
+}
+
+/* Scale hero headings smoothly across sizes */
+.hero-text h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+/* Improve tap targets */
+.w3-bar a,
+.w3-bar button {
+  padding: 0.6rem 0.9rem;
 }
