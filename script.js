@@ -5,7 +5,8 @@ const closeModalBtn = document.querySelector('#close-modal-btn');
 const myModal = document.querySelector('#myModal');
 const clearCartBtn = document.querySelector('#clear-cart-btn');
 const processOrderBtn = document.querySelector('#process-order-btn');
-
+const contactSubmitButton = document.querySelector('#contact-submit');
+const testimonialSubmitButton = document.querySelector('#testimonial-btn');
 
 let cartItemCount = 0;
 cartButton.innerText = `Cart (${cartItemCount})`;
@@ -73,3 +74,15 @@ if (menuToggle && mainNav) {
     menuToggle.setAttribute('aria-expanded', String(!!isOpen));
   });
 }
+
+// submit contact form alert
+contactSubmitButton.addEventListener('click', function (event) {
+  // event.preventDefault();
+  alert('Thank you for your message');
+});
+
+// submit testimonial form alert
+testimonialSubmitButton.addEventListener('click', function (event) {
+  event.preventDefault();
+  alert('Thank you for your testimonial');
+});
