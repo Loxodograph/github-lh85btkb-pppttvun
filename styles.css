@@ -1,3 +1,14 @@
+li {
+  display: flex;
+}
+
+li > img {
+  width: 50px;
+  height: auto;
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+
 #total-price {
   font-weight: bold;
   margin-top: 1rem;
@@ -30,11 +41,30 @@ a {
   text-decoration: none;
 }
 
+.product > p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.product > h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.offers-banner > p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 .product-button,
-.offer-button {
-  background-color: #d3d3d3;
-  box-shadow: #001f3f;
+.offer-button,
+.add-to-cart {
+  background-color: #16336d;
+  color: #d3d3d3;
+  font-size: 1rem;
+  font-weight: bold;
   border-radius: 9%;
+  margin-bottom: 10px;
 }
 
 .footer-nav {

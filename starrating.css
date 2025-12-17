@@ -1,3 +1,23 @@
+li {
+  display: flex;
+}
+
+#testimonial-btn {
+  background-color: #20458e;
+  color: #d3d3d3;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+li > img {
+  width: 50px;
+  height: auto;
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+
+
 #total-price {
   font-weight: bold;
   margin-top: 1rem;
@@ -389,6 +409,9 @@ hr {
   nav.w3-bar a,
   nav.w3-bar button {
     width: auto;
+  }
+  #menu-toggle {
+    display: none;
   }
 }
 

@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="starrating.css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="module" src="script.js"></script>
   <script src="https://kit.fontawesome.com/f19549c8d6.js" crossorigin="anonymous"></script>
 
 </head>
@@ -24,7 +23,8 @@
         style="width: 100px; height: auto" />
       <h2 id="topfont">ABC Fitness Studio</h2>
       <nav id="main-nav" class="w3-bar my-custom-color">
-        <button id="menu-toggle" class="w3-bar-item menu-btn" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
+        <button id="menu-toggle" class="w3-bar-item menu-btn" aria-expanded="false" aria-controls="main-nav">☰
+          Menu</button>
         <div class="marker">You are currently on </div>
         <a class="w3-bar-item w3-button w3-mobile" href="/" aria-current="page">Home</a>
         <div class="marker">You are currently on </div>
@@ -140,7 +140,7 @@
     <h2>Share Your Experience</h2>
     <form action="" method="post" id="contactusform">
       <label for="name">Your Name<br>
-        <input type="text" name="name" placeholder="Enter Your Name" required>
+        <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
       </label><br><br>
       <div class="container">
         <div class="rating">
@@ -163,7 +163,7 @@
       <label for="review">Your Review:</label><br>
       <textarea id="review" name="review" rows="4" cols="50" placeholder="Tell us about your experience..."
         required></textarea><br>
-      <input type="submit" value="Submit" id="testimonial-btn">
+      <input type="submit" onclick="submitForm()" value="Submit" id="testimonial-btn">
     </form>
   </section>
 </body>
@@ -227,12 +227,21 @@
     <form action="">
       <label for="email"></label><br />
       <input type="email" id="email" name="email" value="Your Email" /><br />
-      <input type="submit" value="Subscribe" id="newsletter-btn"/>
+      <input type="submit" value="Subscribe" id="newsletter-btn" />
     </form>
 
 
 
   </section>
 </footer>
+<script type="module" src="script.js"></script>
+<script>
+  const testimonialSubmitButton = document.querySelector('#testimonial-btn');
+
+  testimonialSubmitButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    alert('Thank you for your testimonial');
+  });
+</script>
 
 </html>

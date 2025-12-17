@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="module" src="script.js"></script>
   <script src="https://kit.fontawesome.com/f19549c8d6.js" crossorigin="anonymous"></script>
 
 </head>
@@ -24,7 +23,8 @@
         style="width: 100px; height: auto" />
       <h2 id="topfont">ABC Fitness Studio</h2>
       <nav id="main-nav" class="w3-bar my-custom-color">
-        <button id="menu-toggle" class="w3-bar-item menu-btn" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
+        <button id="menu-toggle" class="w3-bar-item menu-btn" aria-expanded="false" aria-controls="main-nav">☰
+          Menu</button>
         <div class="marker">You are currently on </div>
         <a class="w3-bar-item w3-button w3-mobile" href="/" aria-current="page">Home</a>
         <div class="marker">You are currently on </div>
@@ -92,29 +92,29 @@
         <section class="business-hours">
           <div class="table-responsive">
             <table id="hours">
-            <tr>
-              <th colspan="3">Business Hours</th>
-            </tr>
-            <tr>
-              <th>Days</th>
-              <th>Open</th>
-              <th>Close</th>
-            </tr>
-            <tr>
-              <td>Mon-Fri</td>
-              <td>6:00 AM</td>
-              <td>8:00 PM</td>
-            </tr>
-            <tr>
-              <td>Sat</td>
-              <td>8:00 AM</td>
-              <td>8:00 PM</td>
-            </tr>
-            <tr>
-              <td>Sun</td>
-              <td colspan="2">Closed</td>
-            </tr>
-          </table>
+              <tr>
+                <th colspan="3">Business Hours</th>
+              </tr>
+              <tr>
+                <th>Days</th>
+                <th>Open</th>
+                <th>Close</th>
+              </tr>
+              <tr>
+                <td>Mon-Fri</td>
+                <td>6:00 AM</td>
+                <td>8:00 PM</td>
+              </tr>
+              <tr>
+                <td>Sat</td>
+                <td>8:00 AM</td>
+                <td>8:00 PM</td>
+              </tr>
+              <tr>
+                <td>Sun</td>
+                <td colspan="2">Closed</td>
+              </tr>
+            </table>
           </div>
         </section>
       </div>
@@ -127,17 +127,20 @@
         </div>
         <section class="contact-form">
           <h2>Contact Us</h2>
-          <form action="" method="post" id="contactusform">
-            <label for="name">Name
-              <input type="text" name="name" placeholder="Your Name" required>
-            </label><br>
-            <label for="email">Email
-              <input type="email" name="email" placeholder="Your Email" required>
-            </label><br>
-            <label for="message">Message
-              <textarea id="message" name="message" rows="4" cols="50" placeholder="Your Message" required></textarea>
-            </label><br>
-            <input type="submit" value="Submit" id="contact-submit">
+          <form autocomplete="on" id="contactusform">
+            <label>Name:
+              <input type="text" name="name" id="name" /></label><br />
+            <label>Email:
+              <input type="email" name="email" id="contact-email" /></label><br />
+            <label>Phone:
+              <input type="tel" name="phone" id="phone" /></label><br />
+            <label>Feedback:
+              <textarea name="feedback" id="feedback"></textarea></label><br />
+            <label>Custom Order:
+              <input type="checkbox" name="customOrder" id="custom-order" /></label><br />
+            <br />
+            <input type="button" value="Submit" id="submitButton" />
+            <input type="reset" value="Clear Form" />
           </form>
         </section>
       </div>
@@ -211,12 +214,51 @@
     <form action="">
       <label for="email"></label><br />
       <input type="email" id="email" name="email" placeholder="Your Email" /><br />
-      <input type="submit" value="Subscribe" id="newsletter-btn"/>
+      <input type="submit" value="Subscribe" id="newsletter-btn" />
     </form>
 
 
 
   </section>
 </footer>
+<script type="module" src="script.js"></script>
+<script>
+  const contactSubmitButton = document.querySelector("#submitButton")
+
+  contactSubmitButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    submitForm();
+  });
+
+  function submitForm() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("contact-email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const feedback = document.getElementById("feedback").value.trim();
+    const customOrder = document.getElementById("custom-order").checked;
+
+    // Validation
+    if (!name) {
+      alert("Please enter your name");
+      return;
+    }
+
+    const customerInfo = {
+      name, email, phone, feedback, customOrder
+    };
+
+    const keyValue = name;
+    //save customer information to localStorage
+    try {
+      localStorage.setItem(keyValue, JSON.stringify(customerInfo));
+
+      //access and parse local data back out of localStorage. 
+      const who = JSON.parse(localStorage.getItem(name));
+      alert("Thank you for your message, " + who.name + "!");
+    } catch (error) {
+      console.error("Error saving to localStorage:", error);
+      alert("Thank you for your message, " + name + "!");
+    }
+  }</script>
 
 </html>
